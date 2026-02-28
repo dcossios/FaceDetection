@@ -25,15 +25,3 @@ python3 -m http.server 8000
 http://localhost:8000
 
 4. Permitir acceso a la cámara cuando el navegador lo solicite.
-
-Qué revisar si no funciona
-- Consola del navegador (DevTools): errores de carga de modelos, CORS o permisos de cámara.
-- Error `Failed to fetch` / CORS: asegúrate de servir el sitio por `http://` (no abrir `file://`).
-- Error de cámara: comprueba que el navegador soporte `getUserMedia` y que no esté bloqueado por la configuración o por Brave/extension.
-- Archivos de modelo: la carpeta `models/` debe contener los archivos `.json` y los shards tal como vienen en el repositorio.
-
-Notas adicionales
-- Se incluyó TensorFlow.js via CDN en `index.html` porque `face-api.js` depende de él.
-- Localhost usa HTTP y el acceso a la cámara funciona en la mayoría de navegadores; en dispositivos remotos puede requerir HTTPS.
-
-¿Quieres que haga un commit con estos cambios y el `README.md`?
